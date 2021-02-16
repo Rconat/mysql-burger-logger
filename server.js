@@ -14,9 +14,6 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// data
-var burgers = []
-
 
 // routes
 // get route

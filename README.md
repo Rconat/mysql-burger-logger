@@ -42,7 +42,7 @@ The "Eat-Da-Burger!" application allows users to input any type of burger they w
 
 ## Credits
 
-Working along side professors and TAs through Trinity and Northwestern Coding Bootcamp to provide the file structure and directories as well as the base application assignment.
+Working alongside professors and TAs through Trinity and Northwestern Coding Bootcamp to provide the file structure and directories as well as the assignment parameters.
 
 ---
 
