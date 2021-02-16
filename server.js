@@ -21,7 +21,7 @@ const connection = mysql.createConnection({
 })
 
 // data
-var burgers = [{}]
+var burgers = []
 
 connection.connect(function (err) {
     if (err) {
@@ -34,7 +34,7 @@ connection.connect(function (err) {
 // routes
 // get route
 app.get("/", function(req, res) {
-    res.send('GET request to the homepage')
+    res.render("index", burgers)
 });
 
 // post route

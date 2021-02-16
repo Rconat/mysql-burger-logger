@@ -2,21 +2,31 @@
 
 <h2>Eat-Da-Burger!</h2>
 
-<ul>
+<ul id="burgerList">
     {{#each burgers}}
     <li>
-        <div id="burgerList">
+        <div id="burgers">
             <h1>{{id}}. {{burger}}</h1>
         </div>
-        <button id="devour">Devour!</button>
+        <button id="devour">Devour it!</button>
     </li>
     {{/each}}
 </ul>
 
+<ul id="devouredBurgerList">
+    {{#each burgers}}
+    <li>
+        <div id="devouredBurgers">
+            <h1>{{id}}. {{burger}}</h1>
+        </div>
+    </li>
+    {{#each burgers}}
+</ul>
+
 <form>
-    <textarea id=burgerForm></textarea>
+    <textarea id="burgerForm"></textarea>
 </form>
 
 <button id="submit">submit</button>
 
-<h4>Enter a burger you want to eat and click the "submit" button.</h4>
+<h4>Enter a burger you want to eat and click the SUBMIT button.</h4>
