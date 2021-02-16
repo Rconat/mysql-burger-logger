@@ -29,7 +29,15 @@ connection.connect(function (err) {
 });
 
 // routes
+// get route
+app.get("/", function(req, res) {
+    res.send('GET request to the homepage')
+});
 
+// post route
+app.post("/", function(req, res) {
+    res.send('POST request to the homepage')
+})
 
 
 // Start our server so that it can begin listening to client requests.
