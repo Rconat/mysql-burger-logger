@@ -20,6 +20,9 @@ const connection = mysql.createConnection({
     database: 'burger_db'
 })
 
+// data
+var burgers = [{}]
+
 connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);

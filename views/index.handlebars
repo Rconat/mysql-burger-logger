@@ -2,6 +2,17 @@
 
 <h2>Eat-Da-Burger!</h2>
 
+<ul>
+    {{#each burgers}}
+    <li>
+        <div id="burgerList">
+            <h1>{{id}}. {{burger}}</h1>
+        </div>
+        <button id="devour">Devour!</button>
+    </li>
+    {{/each}}
+</ul>
+
 <form>
     <textarea id=burgerForm></textarea>
 </form>
