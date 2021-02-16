@@ -8,6 +8,10 @@ const app = express();
 // process.env.PORT lets the port be set by Heroku
 const PORT = process.env.PORT || 8080;
 
+// set static content to public folder
+app.use(express.static("public"));
+app.use(express.json());
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 

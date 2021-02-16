@@ -3,24 +3,28 @@
 <h2>Eat-Da-Burger!</h2>
 
 <ul id="burgerList">
-    {{#each burgers}}
-    <li>
-        <div id="burgers">
-            <h1>{{id}}. {{burger}}</h1>
-        </div>
-        <button id="devour">Devour it!</button>
-    </li>
-    {{/each}}
+    {{#unless devoured}}
+        {{#each burgers}}
+        <li data-id="{{id}}">
+            <div id="burgers">
+                <h1>{{id}}. {{burger}}</h1>
+            </div>
+            <button data-id="{{id}}" class="devour">Devour it!</button>
+        </li>
+        {{/each}}
+    {{/unless}}
 </ul>
 
 <ul id="devouredBurgerList">
-    {{#each burgers}}
-    <li>
-        <div id="devouredBurgers">
-            <h1>{{id}}. {{burger}}</h1>
-        </div>
-    </li>
-    {{#each burgers}}
+    {{#if devoured}}
+        {{#each burgers}}
+        <li>
+            <div id="devouredBurgers">
+                <h1>{{id}}. {{burger}}</h1>
+            </div>
+        </li>
+        {{#each burgers}}
+    {{/if}}
 </ul>
 
 <form>
