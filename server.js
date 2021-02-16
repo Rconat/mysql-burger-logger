@@ -1,6 +1,5 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const mysql = require("mysql");
 
 const app = express();
 
@@ -15,28 +14,9 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//connection to JAWSDB
-// const connection = mysql.createConnection(process.env.JAWSDB_URL)
-
-// mysql connection to the database
-const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3000,
-    user: 'root',
-    password: 'root',
-    database: 'burger_db'
-})
-
 // data
 var burgers = []
 
-connection.connect(function (err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-    console.log("connected as id " + connection.threadId);
-});
 
 // routes
 // get route
