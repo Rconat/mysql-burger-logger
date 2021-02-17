@@ -4,7 +4,7 @@
 
 <ul id="burgerList">
     {{#unless devoured}}
-        {{#each burgers}}
+        {{#each burger}}
         <li data-id="{{id}}">
             <div id="burgers">
                 <h1>{{id}}. {{burger}}</h1>
@@ -17,17 +17,17 @@
 
 <ul id="devouredBurgerList">
     {{#if devoured}}
-        {{#each burgers}}
+        {{#each burger}}
         <li>
             <div id="devouredBurgers">
                 <h1>{{id}}. {{burger}}</h1>
             </div>
         </li>
-        {{#each burgers}}
+        {{/each}}
     {{/if}}
 </ul>
 
-<form>
+<form id="formSubmit">
     <textarea id="burgerForm"></textarea>
 </form>
 

@@ -31,6 +31,7 @@ You can find the repo on [GitHub](https://github.com/Rconat/mysql-burger-logger)
     <li>index.handlebars</li>
     <li>main.handlebars</li>
     <li>burger.js</li>
+    <li>script.js</li>
     <li>styles.css</li>
     <li>burger.png</li>
     <li>mainPage.png</li>
