@@ -9,6 +9,7 @@ const burger = require("../models/burger.js");
 // Router Get
 router.get("/", function(req, res){
     burger.selectAll(function(data) {
+        // console.log(data)
         res.render("index", {burgers:data});
     })
 });
@@ -16,6 +17,7 @@ router.get("/", function(req, res){
 // Router Post
 router.post("/", function(req, res) {
     burger.insertOne("burger_name", req.body.burger_name, function(data) {
+        // console.log(data)
         res.status(200).send
     })
 })
@@ -26,6 +28,8 @@ router.put("/:id", function(req, res) {
     burger.selectOne({id: id}, function(data) {
         const selectedBurger = data[0]
 
+        // console.log(data[0])
+
         if (selectedBurger === 0) {
             selectedBurger.devoured = 1
         } else {
@@ -33,6 +37,8 @@ router.put("/:id", function(req, res) {
         }
 
         burger.updateOne("devoured", selectedBurger.devoured, {id:id}, function(data) {
+            
+        // console.log(data)
             res.status(200).end()
         })
     })
